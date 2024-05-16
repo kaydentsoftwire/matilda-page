@@ -1,3 +1,14 @@
+:root {
+    --main-text-color: rgba(0, 0, 8, 0.786);
+}
+
+@keyframes background-shift {
+    0% {background-color: var(--main-text-color);}
+    50% {background-color: white;}
+    99% {background-color: var(--main-text-color)}
+    100% {background-color: rgb(63, 12, 12)}
+  }
+
 body {
     width: 80%;
     padding-left: 10%;
@@ -15,11 +26,18 @@ main {
 h1 {
     text-align: center;
     width: 100%;
-    background-color: rgba(0, 0, 8, 0.786);
+    background-color: var(--main-text-color);
     color: white;
     padding-top: 2.5%;
     padding-bottom: 2.5%;
     border-radius: 5%;
+    animation-name: background-shift;
+    animation-duration: 30s;
+    animation-iteration-count: 1;
+}
+
+h2 {
+    color: var(--main-text-color)
 }
 
 div {
@@ -56,4 +74,8 @@ img {
     background-color: crimson;
     color: white;
     border-radius: 50%;
+}
+
+caption {
+    color: var(--main-text-color);
 }
